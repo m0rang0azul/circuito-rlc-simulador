@@ -15,6 +15,7 @@ Simulador interativo de circuito RLC série para ensino de fenômenos de resson�
 
 ## Referências
 -Livro: HALLIDAY, David; RESNICK, Robert; WALKER, Jearl. **Fundamentos de Física - Eletromagnetismo**. 10ª ed. Rio de Janeiro: LTC, 2016.
+
 -Vídeo: Traçando Diagramas Fasoriais de Circuitos RLC Série (https://youtu.be/iXSSWWzVG68?si=P4G4uhAskWeDo68H).
 
 ## Como executar
