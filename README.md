@@ -13,6 +13,15 @@ Simulador interativo de circuito RLC série para ensino de fenômenos de resson�
 - 📐 Diagrama fasorial
 - 🎮 Controles interativos
 
+## Controles
+- 🔼🔽 aumenta/diminui a frequência
+- ▶️◀️ aumenta/diminui a resistência
+- Z/X aumentar/diminuir o zoom
+- S automático (auto-sweep)
+- R resetar
+- ESC sair
+- 1, 2, 3, 4, 5, 6 diminuir a velocidade
+
 ## Referências
 -Livro: HALLIDAY, David; RESNICK, Robert; WALKER, Jearl. **Fundamentos de Física - Eletromagnetismo**. 10ª ed. Rio de Janeiro: LTC, 2016.
 
