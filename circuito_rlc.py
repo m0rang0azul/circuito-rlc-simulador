@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[15]:
 
 
 """
 Simulador de Circuito RLC Série
 ================================
-Autora: Luana M Souza
+Autora: Luana M. Souza
 GitHub: https://github.com/m0rang0azul
-Data: 2024
+Data: 2026
 Descrição: Simulador interativo para ensino de fenômenos de ressonância em circuitos RLC
 """
 import pygame
@@ -208,7 +208,7 @@ def desenhar_capacitor(x, y):
         glow_surf = pygame.Surface((120, 80), pygame.SRCALPHA)
         for r in range(50, 15, -3):
             alpha = int(intensidade_glow * 120 * (1 - r/50))
-            pygame.draw.rect(glow_surf, (180, 50, 255, alpha), (60-r, 40-r, 2*r, 2*r), border_radius=10)
+            pygame.draw.rect(glow_surf, (200, 50, 255, alpha), (60-r, 40-r, 2*r, 2*r), border_radius=10)
         tela_conteudo.blit(glow_surf, (x-25, y-20))
     
     # Placas do capacitor (horizontais)
@@ -225,9 +225,9 @@ def desenhar_capacitor(x, y):
     pygame.draw.rect(tela_conteudo, (50,50,50), (x-5, y-5, 20, 35), 0, 5)
     tela_conteudo.blit(fonte_pequena.render("-", True, BRANCO), (x+2, y+8))
     
-    # Terminais horizontais (laterais)
-    pygame.draw.line(tela_conteudo, COBRE, (x-5, y+12), (x-20, y+12), 3)  # Esquerdo
-    pygame.draw.line(tela_conteudo, COBRE, (x+largura+5, y+12), (x+largura+20, y+12), 3)  # Direito
+    # Pontos de solda no fio
+    pygame.draw.circle(tela_conteudo, COBRE, (x-7, 420), 5)
+    pygame.draw.circle(tela_conteudo, COBRE, (x+87, 420), 5)
     
     # Etiqueta (abaixo)
     tela_conteudo.blit(fonte_media.render(f"C = {C*1e6:.0f} uF", True, TEXTO_CLARO), (x-5, y+35))
@@ -242,16 +242,16 @@ def desenhar_painel_equacoes():
     pygame.draw.rect(tela_conteudo, (80, 85, 90), (px, py, largura, altura), 3)
     
     # Título
-    tela_conteudo.blit(fonte_grande.render("EQUACOES CIRCUITO RLC EM SÉRIE", True, (255, 255, 200)), (px+20, py+10))
+    tela_conteudo.blit(fonte_grande.render("EQUAÇÕES CIRCUITO RLC EM SÉRIE", True, (255, 255, 200)), (px+20, py+10))
     
     # Equações (cor amarela para destaque)
     equacoes = [
         ("Lei de Ohm:", f"V = R * I"),
-        ("Reatancia Capacitiva:", f"Xc = 1/(2πfC) = 1/(ωC)"),
-        ("Reatancia Indutiva:", f"XL = 2πfL = ωL"),
-        ("Impedancia Total:", f"Z = √(R² + (XL - Xc)²)"),
+        ("Reatância Capacitiva:", f"Xc = 1/(2πfC) = 1/(ωC)"),
+        ("Reatância Indutiva:", f"XL = 2πfL = ωL"),
+        ("Impedância Total:", f"Z = √(R² + (XL - Xc)²)"),
         ("Corrente:", f"I = V/Z"),
-        ("Frequencia de Ressonancia:", f"fn = 1/(2π√(LC))"),
+        ("Frequência de Ressonância:", f"fn = 1/(2π√(LC))"),
         ("Defasagem:", f"φ = arctan((XL - Xc)/R)"),
     ]
     
@@ -331,9 +331,8 @@ def desenhar_fasores():
     
     escala = raio_max / max(V0_fasor, I_fasor*2, Vc_fasor, Vl_fasor, 1)
     
-    # ===== FÍSICA CORRIGIDA (I como referência) =====
-    
-        # ===== CORRENTE LIMITADA AO RAIO DO CÍRCULO =====
+   
+    # ===== CORRENTE LIMITADA AO RAIO DO CÍRCULO =====
     
     # Fator para limitar ao raio máximo
     fator_I = raio_max / I_max_ressonancia  # raio_max / 2.5
@@ -674,12 +673,15 @@ while rodando:
 
 pygame.quit()
 
-# In[ ]:
-
-
-
 
 # In[ ]:
+
+
+
+
+
+# In[ ]:
+
 
 
 
