@@ -1,9 +1,13 @@
-# Simulador de Circuito RLC
+# Simulador Circuito RLC Série / Series RLC Circuit Simulator
 
 **Autora:** Luana M. Souza 
 **GitHub:** [m0rang0azul](https://github.com/m0rang0azul)
 
-Simulador interativo de circuito RLC série para ensino de fenômenos de ressonância.
+Simulador interativo de um circuito RLC em série para o ensino do fenômeno de ressonância.
+
+## 🎥 Demonstração
+
+![Simulador RLC em ação](preview.gif.gif)
 
 ## Funcionalidades
 
@@ -21,10 +25,6 @@ Simulador interativo de circuito RLC série para ensino de fenômenos de resson�
 - R resetar
 - ESC sair
 - 1, 2, 3, 4, 5, 6 reduzir a velocidade
-
-## 🎥 Demonstração
-
-![Simulador RLC em ação](preview.gif.gif)
 
 ## Referências
 -Livro: HALLIDAY, David; RESNICK, Robert; WALKER, Jearl. **Fundamentos de Física - Eletromagnetismo**. 10ª ed. Rio de Janeiro: LTC, 2016.
