@@ -22,6 +22,10 @@ Simulador interativo de circuito RLC série para ensino de fenômenos de resson�
 - ESC sair
 - 1, 2, 3, 4, 5, 6 reduzir a velocidade
 
+## 🎥 Demonstração
+
+![Simulador RLC em ação](preview.gif.gif)
+
 ## Referências
 -Livro: HALLIDAY, David; RESNICK, Robert; WALKER, Jearl. **Fundamentos de Física - Eletromagnetismo**. 10ª ed. Rio de Janeiro: LTC, 2016.
 
